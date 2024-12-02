@@ -16,6 +16,10 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 133px 30px;
 }
 
 h1,
@@ -30,9 +34,259 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 ul,
 ol {
   list-style: none;
+}
+
+.page {
+
+  
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 30px;
+  max-inline-size: 1140px;
+  max-block-size: 534px;
+
+}
+
+.content__list {
+  position: relative;
+  block-size: 299px;
+  inline-size: 100%;
+  overflow-y: auto;
+ 
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: start;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.content__details {
+  block-size: 100%;
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: start;
+  }
+
+  .title {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 75px;
+    line-height: 94%;
+
+  }
+
+  .content__accent {
+    color: #545050;
+
+  }
+  
+.result__video-container {
+  position: relative;
+   margin-bottom: 16px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.result__video {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+
+.search-form__label {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__label input:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+
+
+.search-form__textfield {
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  appearance: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.70);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  min-inline-size: 225px;
+  }
+
+
+    .search-form__checkbox-list {
+    display: flex;
+    gap: 15px;
+  }
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  block-size: 19px;
+  inline-size: 19px;
+  border: 1px solid #fff;
+  vertical-align: middle;
+
+}
+
+
+span {
+  position: relative;
+}
+
+input[type='checkbox']:checked + span::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+
+.button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+  outline-offset: 1px;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+}
+.button:active {
+  background-color: #545050;
+}
+
+
+.search-form__submit-button, .more-button{
+  align-self: end;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.search-form__submit-button {
+  block-size: 34px;
+  inline-size: 194px;
+}
+
+.more-button {
+ inline-size: 100%;
+ min-block-size: 34px;
+}
+
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+
+
+.content__video-card-title {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
+  
+  }
+
+.content__video-card-description::first-letter {
+  text-transform: capitalize;
+  }
+
+  .content__card-link {
+    display: block;
+    margin: 2px;
+  }
+
+  .content__card-link_current {
+    background-color: #545050;
+  }
+  .content__card-link:hover {
+    text-decoration: underline;
+  }
+
+  .content__card-link:active {
+    background-color: #545050;
+  }
+
+li .content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: contain;
+  
+}
+
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
